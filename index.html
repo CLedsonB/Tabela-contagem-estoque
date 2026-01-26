@@ -125,7 +125,7 @@ document.getElementById('download').addEventListener('click', function() {
     var resultado = tabela.rows[i].cells[2].textContent;
     dados +=  descricao + ' : ' + resultado + '\n';
   }
-  var blob = new Blob([dados], {type: 'text/plain'});
+  var blob = new Blob([dados], {type: 'text/plain;charset=UTF-8'});
   var link = document.createElement('a');
   link.href = URL.createObjectURL(blob);
   link.download = 'dados.txt';

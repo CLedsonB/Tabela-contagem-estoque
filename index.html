@@ -119,7 +119,7 @@ document.getElementById('download').addEventListener('click', function() {
   for (var i = 1; i < tabela.rows.length; i++) {
     var descricao = tabela.rows[i].cells[0].querySelector('input').value;
     var resultado = tabela.rows[i].cells[2].textContent;
-    dados += 'Descrição: ' + descricao + ' - Resultado: ' + resultado + '\n';
+    dados +=  descricao + ' : ' + resultado + '\n';
   }
   var blob = new Blob([dados], {type: 'text/plain'});
   var link = document.createElement('a');

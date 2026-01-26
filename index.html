@@ -134,6 +134,50 @@ document.getElementById('download').addEventListener('click', function() {
   link.click();
   document.body.removeChild(link);
 });
+// Função para salvar os dados da tabela no LocalStorage
+function salvarDados() {
+  var tabela = document.getElementById('tabela');
+  var dados = [];
+  for (var i = 1; i < tabela.rows.length; i++) {
+    var descricao = tabela.rows[i].cells[0].querySelector('input').value;
+    var valor = tabela.rows[i].cells[1].querySelector('input').value;
+    var resultado = tabela.rows[i].cells[2].textContent;
+    dados.push({
+      descricao: descricao,
+      valor: valor,
+      resultado: resultado
+    });
+  }
+  localStorage.setItem('dadosTabela', JSON.stringify(dados));
+}
+
+// Função para carregar os dados da tabela do LocalStorage
+function carregarDados() {
+  var dados = localStorage.getItem('dadosTabela');
+  if (dados) {
+    dados = JSON.parse(dados);
+    var tabela = document.getElementById('tabela');
+    // Limpar a tabela
+    while (tabela.rows.length > 1) {
+      tabela.deleteRow(1);
+    }
+    // Adicionar os dados à tabela
+    for (var i = 0; i < dados.length; i++) {
+      var novaLinha = tabela.insertRow(tabela.rows.length);
+      novaLinha.innerHTML = `
+        <td><input type="text" class="descricao" value="${dados[i].descricao}"></td>
+        <td><input type="text" class="valor" value="${dados[i].valor}" oninput="calculaResultado(this)"></td>
+        <td class="resultado">${dados[i].resultado}</td>
+      `;
+    }
+  }
+}
+
+// Salvar os dados quando o usuário sair da página
+window.addEventListener('beforeunload', salvarDados);
+
+// Carregar os dados quando a página for carregada
+window.addEventListener('load', carregarDados);
   </script>
 </body>
 </html>

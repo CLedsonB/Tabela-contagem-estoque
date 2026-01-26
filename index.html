@@ -101,16 +101,20 @@
     });
 
     // Calcula o resultado da soma
-    function calculaResultado(input) {
-      var valor = input.value;
-      var resultado = input.parentNode.nextElementSibling;
-      try {
-        var soma = eval(valor.replace(',', '.'));
-        resultado.textContent = soma + 'g';
-      } catch (e) {
-        resultado.textContent = 'Erro';
-      }
+function calculaResultado(input) {
+  var valor = input.value;
+  var resultado = input.parentNode.nextElementSibling;
+  try {
+    var soma = eval(valor.replace(',', '.'));
+    if (soma >= 1000) {
+      resultado.textContent = (soma / 1000).toFixed(3) + ' kg';
+    } else {
+      resultado.textContent = soma + ' g';
     }
+  } catch (e) {
+    resultado.textContent = 'Erro';
+  }
+}
 
 // Cria um arquivo txt com os dados da tabela
 document.getElementById('download').addEventListener('click', function() {

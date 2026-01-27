@@ -1,0 +1,122 @@
+Antartica 0 Lata 
+Antatica Lata 
+Antartica 1L
+Coca cola 0 Lata 
+Coca cola 0 1L
+Coca cola Lata 
+Coca cola 1L
+H2O
+Heineken
+Heineken 0
+Suco Dell valle uva
+Água 
+Água com gás 
+
+Azeite extra virgem
+Azeite 50% 
+Azeite composto 
+Farinha de trigo
+Fermento 
+Canela em pó 
+Molho shoyu 
+
+Sal 
+Açúcar 
+Caldo de Galinha 
+Caldo de Carne
+Molho Teriyaki 
+
+Atum
+Bacon
+Calabresa
+Camarão 
+Carne de fumeiro
+Frango
+Lombinho 
+Parma 
+Pepperoni 
+Peito de peru
+Presunto 
+Salame
+Presunto Royal
+Ovo
+
+Brie
+Catupiry 
+Cream cheese 
+Queijo Gorgonzola 
+Queijo Mussarela 
+Queijo Parmesão 
+Queijo Provolone 
+Queijo coalho
+stracciatella
+Queijo de bufala 
+Queijo de cabra 
+
+
+Biscoito amanteigado 
+Chocolate ao leite 
+Chocolate branco
+Chocolate branco em barra 
+Creme de avelã 
+Doce de leite 
+Geleia de amora
+Geleia de pimenta
+Goiabada 
+Mel
+Oreo 
+Cebola caramelizada
+
+Amendoin
+Alho 
+Alho-poro 
+Cebolinha 
+Coentro
+Hortelã
+Picles Jalapeño
+Manjericão 
+orégano
+Pimenta calabresa 
+Champingon 
+Molho Pesto
+Páprica Doce
+alho frito 
+
+Azeitona 
+banana da prata 
+banana da terra 
+cebola roxa
+cebola branca
+Cenoura
+milho 
+morango
+Cominho 
+polpa de tomate 
+rúcula 
+tomate 
+tomate cereja
+limão siciliano 
+
+papel higiênico
+papel toalha
+papel interfolhado
+sabão em pó
+copo descartável
+gás
+bobina
+luva 
+álcool bicarbonato 
+cx ketchup sachê 
+cx mostarda sachê
+qboa
+limpador perfumado
+detergente 
+esponja
+
+Caixa G
+Caixa M
+Caixa P
+Caixa Roll
+Lacre Itta
+Papel manteiga
+Etiqueta

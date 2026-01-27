@@ -3,181 +3,160 @@
 <head>
   <title>Tabela de Cálculos</title>
   <style>
-* {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-    body {
-      background-color: #000;
-      font-family: Arial, sans-serif;
-      color: #fff;
-    }
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin: 20px 0;
-    }
-    th, td {
-      border: 1px solid #ddd;
-      padding: 10px;
-      text-align: center;
-    }
-    th {
-      background-color: #f0f0f0;
-      color: #000;
-    }
-    input[type="text"] {
-      width: 100%;
-      padding: 10px;
-      border: none;
-      border-radius: 5px;
-    }
-    #adicionar-linha {
-      background-color: #f00;
-      color: #fff;
-      border: none;
-      padding: 10px 20px;
-      font-size: 16px;
-      border-radius: 5px;
-      cursor: pointer;
-      width: 50px;
-      margin: 10px;
-    }
-    #download {
-      background-color: #0f0;
-      color: #fff;
-      border: none;
-      padding: 10px 20px;
-      font-size: 16px;
-      border-radius: 5px;
-      cursor: pointer;
-      width: 100px;
-      margin: 10px;
-    }
-    .botoes {
-      text-align: center;
-      margin-top: 20px;
-    }
-    @media (min-width: 768px) {
-      table {
-        width: 80%;
-        margin: 20px auto;
-      }
-      #adicionar-linha, #download {
-        width: auto;
-      }
-    }
+    * {
+  margin: 0;
+  padding: 0;
+  border: none;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  outline: none;
+}
+    body { background-color: #000; font-family: Arial, sans-serif; color: #fff; }
+    table { width: 100%; border-collapse: collapse; margin: 20px 0; border: 1px solid #ffffff;}
+    th, td { border: 1px solid #ddd; padding: 10px; text-align: center; }
+    th { background-color: #f0f0f0; color: #000; }
+    input[type="text"] { width: 100%; padding: 10px; border: none; border-radius: 5px; background-color: #000000; color: #ffffff; text-align: center;}
+    #adicionar-linha { background-color: #f00; color: #fff; border: none; padding: 10px; font-size: 30px; border-radius: 80%; cursor: pointer; width: 50px; height: 50px; margin: 10px; }
+    #download { background-color: #2bb800; color: #fff; border: none; padding: 10px; font-size: 16px; border-radius: 5px; cursor: pointer; width: 100px; margin: 10px; }
+    .botoes { text-align: center; margin-top: 20px; }
+    @media (min-width: 768px) { table { width: 80%; margin: 20px auto; } #adicionar-linha, #download { width: auto; } }
   </style>
 </head>
 <body>
   <table id="tabela">
     <tr>
       <th>Descrição</th>
-      <th>Valor (g)</th>
-      <th>Resultado (g)</th>
-    </tr>
-    <tr>
-      <td><input type="text" class="descricao"></td>
-      <td><input type="text" class="valor" oninput="calculaResultado(this)"></td>
-      <td class="resultado"></td>
+      <th>Valor (kg / g)</th>
+      <th>Resultado (kg / g)</th>
     </tr>
   </table>
   <div class="botoes">
     <button id="adicionar-linha">+</button>
     <button id="download">Download</button>
   </div>
-
   <script>
     // Adiciona uma nova linha na tabela
     document.getElementById('adicionar-linha').addEventListener('click', function() {
       var tabela = document.getElementById('tabela');
       var novaLinha = tabela.insertRow(tabela.rows.length);
       novaLinha.innerHTML = `
-        <td><input type="text" class="descricao"></td>
-        <td><input type="text" class="valor" oninput="calculaResultado(this)"></td>
+        <td><input type="text" class="descricao" placeholder="Nome do Produto"></td>
+        <td><input type="text" class="valor" oninput="calculaResultado(this)" placeholder="0.000"></td>
         <td class="resultado"></td>
       `;
     });
 
     // Calcula o resultado da soma
-function calculaResultado(input) {
-  var valor = input.value;
-  var resultado = input.parentNode.nextElementSibling;
-  try {
-    var soma = eval(valor.replace(',', '.'));
-    if (soma >= 1000) {
-      resultado.textContent = (soma / 1000).toFixed(3) + ' kg';
-    } else {
-      resultado.textContent = soma + ' g';
+    function calculaResultado(input) {
+      var valor = input.value;
+      var resultado = input.parentNode.nextElementSibling;
+      try {
+        var soma = eval(valor.replace(',', '.'));
+        if (soma >= 1000) {
+          resultado.textContent = (soma / 1000).toFixed(3) + ' kg';
+        } else {
+          resultado.textContent = soma + ' g';
+        }
+      } catch (e) {
+        resultado.textContent = 'Erro';
+      }
     }
-  } catch (e) {
-    resultado.textContent = 'Erro';
-  }
-}
 
-// Cria um arquivo txt com os dados da tabela
-document.getElementById('download').addEventListener('click', function() {
-  var tabela = document.getElementById('tabela');
-  var dados = '';
-  for (var i = 1; i < tabela.rows.length; i++) {
-    var descricao = tabela.rows[i].cells[0].querySelector('input').value;
-    var resultado = tabela.rows[i].cells[2].textContent;
-    dados +=  descricao + ' : ' + resultado + '\n';
-  }
-  var blob = new Blob([dados], {type: 'text/plain;charset=UTF-8'});
-  var link = document.createElement('a');
-  link.href = URL.createObjectURL(blob);
-  link.download = 'dados.txt';
-  link.style.display = 'none';
-  document.body.appendChild(link);
-  link.click();
-  document.body.removeChild(link);
-});
-// Função para salvar os dados da tabela no LocalStorage
-function salvarDados() {
-  var tabela = document.getElementById('tabela');
-  var dados = [];
-  for (var i = 1; i < tabela.rows.length; i++) {
-    var descricao = tabela.rows[i].cells[0].querySelector('input').value;
-    var valor = tabela.rows[i].cells[1].querySelector('input').value;
-    var resultado = tabela.rows[i].cells[2].textContent;
-    dados.push({
-      descricao: descricao,
-      valor: valor,
-      resultado: resultado
+    // Cria um arquivo txt com os dados da tabela
+    document.getElementById('download').addEventListener('click', function() {
+      var nomeArquivo = prompt('Digite o nome do arquivo (padrão: dados.txt):');
+      if (nomeArquivo === null || nomeArquivo.trim() === '') {
+        nomeArquivo = 'dados.txt';
+      } else {
+        nomeArquivo += '.txt';
+      }
+      var tabela = document.getElementById('tabela');
+      var dados = '';
+      for (var i = 1; i < tabela.rows.length; i++) {
+        var descricao = tabela.rows[i].cells[0].querySelector('input').value;
+        var resultado = tabela.rows[i].cells[2].textContent;
+        dados += descricao + ' : ' + resultado + '\n';
+      }
+      var blob = new Blob([dados], {type: 'text/plain;charset=UTF-8'});
+      var link = document.createElement('a');
+      link.href = URL.createObjectURL(blob);
+      link.download = nomeArquivo;
+      link.style.display = 'none';
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
     });
-  }
-  localStorage.setItem('dadosTabela', JSON.stringify(dados));
-}
 
-// Função para carregar os dados da tabela do LocalStorage
-function carregarDados() {
-  var dados = localStorage.getItem('dadosTabela');
-  if (dados) {
-    dados = JSON.parse(dados);
-    var tabela = document.getElementById('tabela');
-    // Limpar a tabela
-    while (tabela.rows.length > 1) {
-      tabela.deleteRow(1);
+    // Função para salvar os dados da tabela no LocalStorage
+    function salvarDados() {
+      var tabela = document.getElementById('tabela');
+      var dados = [];
+      for (var i = 1; i < tabela.rows.length; i++) {
+        var descricao = tabela.rows[i].cells[0].querySelector('input').value;
+        var valor = tabela.rows[i].cells[1].querySelector('input').value;
+        var resultado = tabela.rows[i].cells[2].textContent;
+        dados.push({ descricao: descricao, valor: valor, resultado: resultado });
+      }
+      localStorage.setItem('dadosTabela', JSON.stringify(dados));
     }
-    // Adicionar os dados à tabela
-    for (var i = 0; i < dados.length; i++) {
-      var novaLinha = tabela.insertRow(tabela.rows.length);
-      novaLinha.innerHTML = `
-        <td><input type="text" class="descricao" value="${dados[i].descricao}"></td>
-        <td><input type="text" class="valor" value="${dados[i].valor}" oninput="calculaResultado(this)"></td>
-        <td class="resultado">${dados[i].resultado}</td>
-      `;
+
+    // Função para carregar os dados da tabela do LocalStorage
+    function carregarDados() {
+      var dados = localStorage.getItem('dadosTabela');
+      if (dados) {
+        dados = JSON.parse(dados);
+        var tabela = document.getElementById('tabela');
+        // Limpar a tabela
+        while (tabela.rows.length > 1) {
+          tabela.deleteRow(1);
+        }
+        // Adicionar os dados à tabela
+        for (var i = 0; i < dados.length; i++) {
+          var novaLinha = tabela.insertRow(tabela.rows.length);
+          novaLinha.innerHTML = `
+            <td><input type="text" class="descricao" value="${dados[i].descricao}"></td>
+            <td><input type="text" class="valor" value="${dados[i].valor}" oninput="calculaResultado(this)"></td>
+            <td class="resultado">${dados[i].resultado}</td>
+          `;
+        }
+      }
     }
-  }
-}
 
-// Salvar os dados quando o usuário sair da página
-window.addEventListener('beforeunload', salvarDados);
+    // Função para ler o arquivo de texto e criar linhas na tabela
+    function lerArquivo() {
+      fetch('base.txt')
+        .then(response => response.text())
+        .then(data => {
+          var linhas = data.split('\n');
+          var tabela = document.getElementById('tabela');
+          // Limpar a tabela
+          while (tabela.rows.length > 1) {
+            tabela.deleteRow(1);
+          }
+          // Adicionar os dados à tabela
+          for (var i = 0; i < linhas.length; i++) {
+            if (linhas[i].trim() !== '') {
+              var novaLinha = tabela.insertRow(tabela.rows.length);
+              novaLinha.innerHTML = `
+                <td><input type="text" class="descricao" value="${linhas[i]}"></td>
+                <td><input type="text" class="valor" oninput="calculaResultado(this)" placeholder="0.000"></td>
+                <td class="resultado"></td>
+              `;
+            }
+          }
+        })
+        .catch(error => console.error('Erro ao ler arquivo:', error));
+    }
 
-// Carregar os dados quando a página for carregada
-window.addEventListener('load', carregarDados);
+    // Chamar a função quando a página for carregada
+    window.addEventListener('load', function() {
+      carregarDados();
+      lerArquivo();
+    });
+
+    // Salvar os dados quando o usuário sair da página
+    window.addEventListener('beforeunload', salvarDados);
   </script>
 </body>
 </html>

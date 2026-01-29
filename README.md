@@ -5,7 +5,7 @@ Demostração :  [clique aqui](https://cledsonb.github.io/Tabela-contagem-estoqu
 A Tabela de Estoque é uma ferramenta web que permite aos usuários calcular e gerenciar quantidades de produtos de forma eficiente.
 
 ## Funcionalidades
-*Carrega uma lista de itens pré definido no arquivo base.txt
+* Carrega uma lista de itens pré definido no arquivo base.txt
 * Adicionar produtos à tabela
 * Calcular quantidades em diferentes unidades (g, kg, und)
 * Filtrar produtos por nome

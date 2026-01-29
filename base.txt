@@ -9,19 +9,19 @@ H2O
 Heineken
 Heineken 0
 Suco Dell valle uva
-Água 
-Água com gás 
+agua 
+agua com gas 
 
 Azeite extra virgem
 Azeite 50% 
 Azeite composto 
 Farinha de trigo
 Fermento 
-Canela em pó 
+Canela em po
 Molho shoyu 
 
-Sal 
-Açúcar 
+sal 
+Acucar 
 Caldo de Galinha 
 Caldo de Carne
 Molho Teriyaki 
@@ -38,7 +38,7 @@ Pepperoni
 Peito de peru
 Presunto 
 Salame
-Presunto Royal
+Presunto Royale
 Ovo
 
 Brie
@@ -46,7 +46,7 @@ Catupiry
 Cream cheese 
 Queijo Gorgonzola 
 Queijo Mussarela 
-Queijo Parmesão 
+Queijo Parmesao
 Queijo Provolone 
 Queijo coalho
 stracciatella
@@ -58,7 +58,7 @@ Biscoito amanteigado
 Chocolate ao leite 
 Chocolate branco
 Chocolate branco em barra 
-Creme de avelã 
+Creme de avela
 Doce de leite 
 Geleia de amora
 Geleia de pimenta
@@ -72,14 +72,14 @@ Alho
 Alho-poro 
 Cebolinha 
 Coentro
-Hortelã
-Picles Jalapeño
-Manjericão 
-orégano
+Hortela
+Picles Jalapeno
+Manjericao
+oregano
 Pimenta calabresa 
 Champingon 
 Molho Pesto
-Páprica Doce
+Paprica Doce
 alho frito 
 
 Azeitona 
@@ -92,22 +92,22 @@ milho
 morango
 Cominho 
 polpa de tomate 
-rúcula 
+rucula 
 tomate 
 tomate cereja
-limão siciliano 
+limao siciliano 
 
 papel higiênico
 papel toalha
 papel interfolhado
-sabão em pó
+sabao em po
 copo descartável
-gás
+gas
 bobina
 luva 
-álcool bicarbonato 
-cx ketchup sachê 
-cx mostarda sachê
+alcool bicarbonato 
+cx ketchup sache
+cx mostarda sache
 qboa
 limpador perfumado
 detergente 

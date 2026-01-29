@@ -32,15 +32,17 @@
     #adicionar-linha { background-color: #f00; color: #fff; border: none; padding: 10px; font-size: 30px; border-radius: 80%; cursor: pointer; width: 50px; height: 50px; margin: 10px; }
     #download { background-color: #2bb800; color: #fff; border: none; padding: 10px; font-size: 16px; border-radius: 5px; cursor: pointer; width: 100px; margin: 10px; }
     .botoes { text-align: center; margin-top: 20px; }
-    @media (min-width: 768px) { table { width: 80%; margin: 20px auto; } #adicionar-linha, #download { width: auto; } }
+    @media (min-width: 768px) { table { width: 80%; margin: 20px auto; } #adicionar-linha, #download { width: auto; } 
+    }
   </style>
 </head>
 <body>
+    <input id="filtro" type="text" placeholder="Filtrar produtos...">
   <table id="tabela">
     <tr>
-      <th>Descrição</th>
-      <th>Valor (kg / g)</th>
-      <th>Resultado (kg / g)</th>
+      <th>Produto</th>
+      <th>Quantidade (g/und)</th>
+      <th>Resultado (g/und)</th>
     </tr>
   </table>
   <div class="botoes">
@@ -48,34 +50,77 @@
     <button id="download">Download</button>
   </div>
   <script>
-    // Adiciona uma nova linha na tabela
-    document.getElementById('adicionar-linha').addEventListener('click', function() {
-      var tabela = document.getElementById('tabela');
-      var novaLinha = tabela.insertRow(tabela.rows.length);
-      novaLinha.innerHTML = `
-        <td><input type="text" class="descricao" placeholder="Nome do Produto"></td>
-        <td><input type="text" class="valor" oninput="calculaResultado(this)" placeholder="0.000"></td>
-        <td class="resultado"></td>
-      `;
-    });
+ 
+// Adiciona uma nova linha na tabela
 
-    // Calcula o resultado da soma
-    function calculaResultado(input) {
-      var valor = input.value;
-      var resultado = input.parentNode.nextElementSibling;
-      try {
-        var soma = eval(valor.replace(',', '.'));
-        if (soma >= 1000) {
-          resultado.textContent = (soma / 1000).toFixed(3) + ' kg';
-        } else {
-          resultado.textContent = soma + ' g';
-        }
-      } catch (e) {
-        resultado.textContent = 'Erro';
+document.getElementById('adicionar-linha').addEventListener('click', function() {
+  var tabela = document.getElementById('tabela');
+  var novaLinha = tabela.insertRow(tabela.rows.length);
+  novaLinha.innerHTML = `
+    <td><input type="text" class="descricao" placeholder="Nome do Produto"></td>
+    <td><input type="text" class="valor" placeholder="0.000"></td>
+    <td class="resultado"><button class="botao-resultado" style="color:white;background-color:black;font-size:18px;"></button></td>
+  `;
+});
+
+// Adiciona um event listener ao input para calcular o resultado
+
+document.addEventListener('input', function(event) {
+  if (event.target.classList.contains('valor')) {
+    var valor = event.target.value;
+    var resultado = event.target.parentNode.nextElementSibling.querySelector('.botao-resultado');
+    try {
+      var soma = eval(valor.replace(',', '.'));
+      resultado.dataset.valor = soma;
+      resultado.dataset.contador = 1;
+      if (soma >= 1000) {
+        resultado.textContent = (soma / 1000).toFixed(3) + ' kg';
+      } else {
+        resultado.textContent = soma + ' g';
+      }
+    } catch (e) {
+      resultado.textContent = 'Erro';
+    }
+  }
+});
+
+// Adiciona um event listener ao botão de resultado
+
+document.addEventListener('click', function(event) {
+  if (event.target.classList.contains('botao-resultado')) {
+    var resultado = event.target;
+    var contador = parseInt(resultado.dataset.contador || 0);
+    contador++;
+    resultado.dataset.contador = contador;
+    var valor = parseFloat(resultado.dataset.valor);
+    if (contador % 2 === 0) {
+      resultado.textContent = valor + ' und';
+    } else {
+      if (valor >= 1000) {
+        resultado.textContent = (valor / 1000).toFixed(3) + ' kg';
+      } else {
+        resultado.textContent = valor + ' g';
       }
     }
+  }
+});
 
-    // Cria um arquivo txt com os dados da tabela
+// filtrar itens da tabela
+
+document.getElementById('filtro').addEventListener('input', function() {
+  var filtro = this.value.toLowerCase();
+  var tabela = document.getElementById('tabela');
+  for (var i = 1; i < tabela.rows.length; i++) {
+    var descricao = tabela.rows[i].cells[0].querySelector('input').value.toLowerCase();
+    if (descricao.includes(filtro)) {
+      tabela.rows[i].style.display = '';
+    } else {
+      tabela.rows[i].style.display = 'none';
+    }
+  }
+});
+
+// Cria um arquivo txt com os dados da tabela
     document.getElementById('download').addEventListener('click', function() {
       var nomeArquivo = prompt('Digite o nome do arquivo (padrão: dados.txt):');
       if (nomeArquivo === null || nomeArquivo.trim() === '') {
@@ -100,7 +145,8 @@
       document.body.removeChild(link);
     });
 
-    // Função para salvar os dados da tabela no LocalStorage
+// Função para salvar os dados da tabela no LocalStorage
+
     function salvarDados() {
       var tabela = document.getElementById('tabela');
       var dados = [];
@@ -113,7 +159,8 @@
       localStorage.setItem('dadosTabela', JSON.stringify(dados));
     }
 
-    // Função para carregar os dados da tabela do LocalStorage
+// Função para carregar os dados da tabela do LocalStorage
+    
     function carregarDados() {
       var dados = localStorage.getItem('dadosTabela');
       if (dados) {
@@ -128,14 +175,14 @@
           var novaLinha = tabela.insertRow(tabela.rows.length);
           novaLinha.innerHTML = `
             <td><input type="text" class="descricao" value="${dados[i].descricao}"></td>
-            <td><input type="text" class="valor" value="${dados[i].valor}" oninput="calculaResultado(this)"></td>
-            <td class="resultado">${dados[i].resultado}</td>
-          `;
+            <td><input type="text" class="valor" value="${dados[i].valor}"></td>
+            <td class="resultado"><button class="botao-resultado" style="color:white;background-color:black;font-size:18px;"></button></td>`;
         }
       }
     }
 
-    // Função para ler o arquivo de texto e criar linhas na tabela
+// Função para ler o arquivo de texto e criar linhas na tabela
+
     function lerArquivo() {
       fetch('base.txt')
         .then(response => response.text())
@@ -151,9 +198,9 @@
             if (linhas[i].trim() !== '') {
               var novaLinha = tabela.insertRow(tabela.rows.length);
               novaLinha.innerHTML = `
-                <td><input type="text" class="descricao" value="${linhas[i]}"></td>
-                <td><input type="text" class="valor" oninput="calculaResultado(this)" placeholder="0.000"></td>
-                <td class="resultado"></td>
+                <td><input type="text" class="descricao" value="${linhas[i].charAt(0).toUpperCase() + linhas[i].slice(1)}"></td>
+                <td><input type="text" class="valor" placeholder="0.000"></td>
+                <td class="resultado"><button class="botao-resultado" style="color:white;background-color:black;font-size:18px;"></button></td>
               `;
             }
           }
@@ -161,13 +208,13 @@
         .catch(error => console.error('Erro ao ler arquivo:', error));
     }
 
-    // Chamar a função quando a página for carregada
+// Chamar a função quando a página for carregada
     window.addEventListener('load', function() {
       carregarDados();
       lerArquivo();
     });
 
-    // Salvar os dados quando o usuário sair da página
+// Salvar os dados quando o usuário sair da página
     window.addEventListener('beforeunload', salvarDados);
   </script>
 </body>

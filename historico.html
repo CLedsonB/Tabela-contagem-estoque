@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+
+<link rel="stylesheet" href="style.css">
+
+<title>Histórico de contagem</title>
+<style>
+  body { font-family: Arial, sans-serif; padding: 20px; }
+  #listaArquivos, #visualizador { margin-top: 20px; }
+  #listaArquivos ul {
+    list-style: none;
+    padding: 0;
+  }
+  #listaArquivos li {
+    padding: 8px 12px;
+    margin: 6px 0;
+    border: 1px solid #ccc;
+    background: #f0f0f0;
+    cursor: pointer;
+    border-radius: 4px;
+    color: black;
+  }
+  #listaArquivos li:hover { background: #e0e0e0; }
+  #conteudo {
+    white-space: pre-wrap;
+    border: 1px solid #ccc;
+    padding: 15px;
+    background: #f9f9f9;
+    min-height: 100px;
+    color: black;
+  }
+  button {
+    padding: 6px 12px;
+    margin-bottom: 10px;
+    cursor: pointer;
+  }
+  a {
+      font-size: 30px;
+  }
+  #setaRetorno {
+      transform: rotate(180deg);
+      width: 40px;
+  }
+</style>
+</head>
+<body>
+<a href="index.html"><img src="icons/seta.gif" id="setaRetorno" alt=""></a>
+<h2>Arquivos disponíveis</h2>
+
+<div id="listaArquivos">
+  <ul id="lista"></ul>
+</div>
+
+<div id="visualizador" style="display:none;">
+  <button id="btnVoltar">← Voltar à lista</button>
+  <h3 id="nomeArquivo"></h3>
+  <div id="conteudo"></div>
+</div>
+
+<script>
+  // 1) Defina aqui os arquivos .txt que a página pode abrir
+  //    (precisam estar na mesma pasta da página ou em um caminho acessível)
+  const arquivos = ['02-02.txt', '02-03.txt', '09-02.txt','09-03.txt','23-02.txt','23-03.txt','30-03.txt', '16-03.txt'];
+
+  const listaEl = document.getElementById('lista');
+  const visualizadorEl = document.getElementById('visualizador');
+  const listaArquivosEl = document.getElementById('listaArquivos');
+  const nomeArquivoEl = document.getElementById('nomeArquivo');
+  const conteudoEl = document.getElementById('conteudo');
+  const btnVoltar = document.getElementById('btnVoltar');
+
+  // 2) Monta a lista
+  arquivos.forEach(nome => {
+    const li = document.createElement('li');
+    li.textContent = nome;
+    li.addEventListener('click', () => carregarArquivo(nome));
+    listaEl.appendChild(li);
+  });
+
+  // 3) Carrega o arquivo escolhido
+  function carregarArquivo(nome) {
+    fetch("dados/" + nome)
+      .then(resp => {
+        if (!resp.ok) throw new Error('Arquivo não encontrado');
+        return resp.text();
+      })
+      .then(texto => {
+        nomeArquivoEl.textContent = nome;
+        conteudoEl.textContent = texto;
+        listaArquivosEl.style.display = 'none';
+        visualizadorEl.style.display = 'block';
+      })
+      .catch(err => {
+        alert(err.message);
+      });
+  }
+
+  // 4) Volta para a lista
+  btnVoltar.addEventListener('click', () => {
+    visualizadorEl.style.display = 'none';
+    listaArquivosEl.style.display = 'block';
+    conteudoEl.textContent = '';
+  });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,25 @@
+    * {
+  margin: 0;
+  padding: 0;
+  border: none;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  outline: none;
+}
+    body { background-color: #000; font-family: Arial, sans-serif; color: #fff; }
+    #iconHistorico {
+        background-color: white;    
+        width: 60px;
+        padding: 5px;
+        border-radius: 50%;
+    }
+    table { width: 100%; border-collapse: collapse; margin: 20px 0; border: 1px solid #ffffff;}
+    th, td { border: 1px solid #ddd; padding: 10px; text-align: center; }
+    th { background-color: #f0f0f0; color: #000; }
+    input[type="text"] { width: 100%; padding: 10px; border: none; border-radius: 5px; background-color: #000000; color: #ffffff; text-align: center;}
+    #adicionar-linha { background-color: #f00; color: #fff; border: none; padding: 10px; font-size: 30px; border-radius: 80%; cursor: pointer; width: 50px; height: 50px; margin: 10px; }
+    #download { background-color: #2bb800; color: #fff; border: none; padding: 10px; font-size: 16px; border-radius: 5px; cursor: pointer; width: 100px; margin: 10px; }
+    .botoes, footer { text-align: center; margin-top: 20px; }
+    @media (min-width: 768px) { table { width: 80%; margin: 20px auto; } #adicionar-linha, #download { width: auto; } 
+    }

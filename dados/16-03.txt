@@ -1,0 +1,112 @@
+Antartica 0 Lata  : 
+Antatica Lata  : 
+Antartica 1L : 
+Coca cola 0 Lata  : 
+Coca cola 0 1L : 
+Coca cola Lata  : 
+Coca cola 1L : 
+H2O : 
+Heineken : 
+Heineken 0 : 
+Suco Dell valle uva : 
+Agua  : 
+Agua com gas  : 
+Azeite extra virgem : 10.000 kg
+Touca : 3 g
+Azeite composto  : 5.300 kg
+Farinha de trigo : 130.000 kg
+Fermento  : 2.000 kg
+Canela em po : 105 g
+Molho shoyu  : 5.585 kg
+Sal  : 24.875 kg
+Acucar  : 11.505 kg
+Caldo de Galinha  : 0 g
+Caldo de Carne : 1.010 kg
+Molho Teriyaki  : 4.405 kg
+Atum : 4.270 kg
+Bacon : 880 g
+Calabresa : 22.130 kg
+Camarão  : 1.440 kg
+Carne de fumeiro : 6.245 kg
+Frango : 9.215 kg
+Lombinho  : 3.650 kg
+Parma  : 845 g
+Pepperoni  : 3.175 kg
+Peito de peru : 9.665 kg
+Presunto  : 13.510 kg
+Salame : 1.345 kg
+Presunto Royale : 645 g
+Ovo : 8 g
+Brie : 865 g
+Catupiry  : 8.960 kg
+Cream cheese  : 12.755 kg
+Queijo Gorgonzola  : 3.880 kg
+Queijo Mussarela  : 66.000 kg
+Queijo Parmesao : 3.090 kg
+Queijo Provolone  : 4.685 kg
+Queijo coalho : 6.340 kg
+Stracciatella : 90 g
+Queijo de bufala  : 840 g
+Queijo de cabra  : 1.440 kg
+Biscoito amanteigado  : 825 g
+Chocolate ao leite  : 7.630 kg
+Chocolate branco : 5.140 kg
+Chocolate branco em barra  : 1.695 kg
+Creme de avela : 3.860 kg
+Doce de leite  : 5.120 kg
+Geleia de amora : 1.200 kg
+Geleia de pimenta : 875 g
+Goiabada  : 3.270 kg
+Mel : 2.200 kg
+Oreo  : 558 g
+Cebola caramelizada : 3.465 kg
+Amendoin : 710 g
+Alho  : 605 g
+Alho-poro  : 90 g
+Cebolinha  : 230 g
+Coentro : 
+Hortela : 
+Picles Jalapeno : 2.425 kg
+Manjericao : 450 g
+Oregano : 2.280 kg
+Pimenta calabresa  : 150 g
+Champingon  : 4.270 kg
+Molho Pesto : 940 g
+Paprica Doce : 145 g
+Alho frito  : 1.800 kg
+Azeitona  : 6.475 kg
+Banana da prata  : 0 g
+Banana da terra  : 2.425 kg
+Cebola roxa : 13.995 kg
+Cebola branca : 10.850 kg
+Cenoura : 2.690 kg
+Milho  : 9.510 kg
+Morango : 147 g
+Cominho  : 330 g
+Polpa de tomate  : 16.480 kg
+Rucula  : 70 g
+Tomate  : 16.015 kg
+Tomate cereja : 365 g
+Limao siciliano  : 130 g
+Papel higiênico : 16 und
+Papel toalha : 0 und
+Papel interfolhado cx : 1 und
+Sabao em po : 1 und
+Bobina G : 4 und
+Gas : 3 und
+Bobina P : 22 und
+Luva  : 11 und
+Alcool bicarbonato  : 4 und
+Cx ketchup sache : 
+Cx mostarda sache : 
+Qboa : 0 und
+Limpador perfumado : 1 und
+Detergente  : 1 und
+Esponja : 
+Caixa G : 
+Caixa M : 
+Caixa P : 
+Caixa Roll : 
+Lacre Itta : 2 und
+Papel manteiga : 1 und
+Etiqueta : 1 und

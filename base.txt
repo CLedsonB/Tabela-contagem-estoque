@@ -14,13 +14,12 @@ agua com gas
 
 Azeite extra virgem
 Azeite 50% 
-Azeite composto 
 Farinha de trigo
 Fermento 
 Canela em po
 Molho shoyu 
 
-sal 
+Sal 
 Acucar 
 Caldo de Galinha 
 Caldo de Carne
@@ -52,7 +51,6 @@ Queijo coalho
 stracciatella
 Queijo de bufala 
 Queijo de cabra 
-
 
 Biscoito amanteigado 
 Chocolate ao leite 
@@ -101,14 +99,19 @@ papel higiênico
 papel toalha
 papel interfolhado
 sabao em po
-copo descartável
+copo 550 ml
+copo 300 ml
+copo 180 ml
 gas
-bobina
+bobina P
+bobina G
 luva 
 alcool bicarbonato 
 cx ketchup sache
 cx mostarda sache
+cx maionese sache
 qboa
+Veja
 limpador perfumado
 detergente 
 esponja

@@ -13,7 +13,7 @@ agua
 agua com gas 
 
 Azeite extra virgem
-Azeite 50% 
+Azeite 30% 
 Farinha de trigo
 Fermento 
 Canela em po
@@ -39,6 +39,8 @@ Presunto
 Salame
 Presunto Royale
 Ovo
+Mortadela
+Pistache
 
 Brie
 Catupiry 
@@ -55,7 +57,7 @@ Queijo de cabra
 Biscoito amanteigado 
 Chocolate ao leite 
 Chocolate branco
-Chocolate branco em barra 
+Chocolate branco barra 
 Creme de avela
 Doce de leite 
 Geleia de amora
@@ -106,6 +108,7 @@ gas
 bobina P
 bobina G
 luva 
+touca
 alcool bicarbonato 
 cx ketchup sache
 cx mostarda sache
@@ -123,3 +126,4 @@ Caixa Roll
 Lacre Itta
 Papel manteiga
 Etiqueta
+

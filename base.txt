@@ -41,6 +41,8 @@ Presunto Royale
 Ovo
 Mortadela
 Pistache
+Vinagre
+Fuba
 
 Brie
 Catupiry 
@@ -73,7 +75,6 @@ Alho-poro
 Cebolinha 
 Coentro
 Hortela
-Picles Jalapeno
 Manjericao
 oregano
 Pimenta calabresa 
@@ -110,6 +111,8 @@ bobina G
 luva 
 touca
 alcool bicarbonato 
+alcool gel
+perfect
 cx ketchup sache
 cx mostarda sache
 cx maionese sache

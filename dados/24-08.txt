@@ -1,0 +1,124 @@
+Antartica 0 Lata  : 7 und
+Antatica Lata  : 12 und
+Antartica 1L : 31 und
+Coca cola 0 Lata  : 14 und
+Coca cola 0 1L : 12 und
+Coca cola Lata  : 17 und
+Coca cola 1L : 29 und
+H2O : 6 und
+Heineken : 12 und
+Heineken 0 : 24 und
+Suco Dell valle uva : 6 und
+Agua  : 13 und
+Agua com gas  : 28 und
+Azeite extra virgem : 9.090 kg
+Azeite 30%  : 7.825 kg
+Farinha de trigo : 50.000 kg
+Fermento  : 1.660 kg
+Canela em po : 75 g
+Molho shoyu  : 1.920 kg
+Sal  : 18.000 kg
+Acucar  : 8.000 kg
+Caldo de Galinha  : 650 g
+Caldo de Carne : 0 g
+Molho Teriyaki  : 4.260 kg
+Atum : 1.030 kg
+Bacon : 5.505 kg
+Calabresa : 32.620 kg
+Camarão  : 15.700 kg
+Carne de fumeiro : 5.750 kg
+Frango : 5.035 kg
+Lombinho  : 4.215 kg
+Parma  : 800 g
+Pepperoni  : 2.965 kg
+Peito de peru : 7.035 kg
+Presunto  : 3.395 kg
+Salame : 2.565 kg
+Presunto Royale : 575 g
+Ovo : 2 und
+Mortadela : 0 g
+Pistache : 515 g
+Brie : 1.200 kg
+Catupiry  : 5.710 kg
+Cream cheese  : 9.330 kg
+Queijo Gorgonzola  : 1.390 kg
+Queijo Mussarela  : 33.505 kg
+Queijo Parmesao : 4.085 kg
+Queijo Provolone  : 3.910 kg
+Queijo coalho : 5.000 kg
+Stracciatella : 940 g
+Queijo de bufala  : 2.800 kg
+Queijo de cabra  : 1.700 kg
+Biscoito amanteigado  : 1.040 kg
+Chocolate ao leite  : 5.245 kg
+Chocolate branco : 3.600 kg
+Chocolate branco barra  : 1.760 kg
+Creme de avela : 3.560 kg
+Doce de leite  : 4.100 kg
+Geleia de amora : 1.740 kg
+Geleia de pimenta : 430 g
+Goiabada  : 7.955 kg
+Mel : 3.080 kg
+Oreo  : 540 g
+Cebola caramelizada : 1.180 kg
+Amendoin : 840 g
+Alho  : 3.050 kg
+Alho-poro  : 50 g
+Cebolinha  : 0 g
+Coentro : 160 g
+Hortela : 250 g
+Picles Jalapeno : 0 g
+Manjericao : 100 g
+Oregano : 1.010 kg
+Pimenta calabresa  : 425 g
+Champingon  : 2.640 kg
+Molho Pesto : 2.020 kg
+Paprica Doce : 650 g
+Alho frito  : 445 g
+Azeitona  : 2.370 kg
+Banana da prata  : 340 g
+Banana da terra  : 740 g
+Cebola roxa : 8.970 kg
+Cebola branca : 0 g
+Cenoura : 2.825 kg
+Milho  : 2.240 kg
+Morango : 215 g
+Cominho  : 470 g
+Polpa de tomate  : 2.060 kg
+Rucula  : 0 g
+Tomate  : 7.510 kg
+Tomate cereja : 340 g
+Limao siciliano  : 770 g
+Papel higiênico : 0 und
+Papel toalha : 1 und
+Papel interfolhado : 0 und
+Sabao em po : 0 und
+Copo 550 ml : 1 und
+Copo 300 ml : 3 und
+Copo 180 ml : 0 und
+Gas : 7 und
+Bobina P : 4 und
+Bobina G : 1 und
+Luva  : 6 und
+Touca : 3 und
+Alcool bicarbonato  : 10 und
+Cx ketchup sache : 1 und
+Cx mostarda sache : 4 und
+Cx maionese sache : 1 und
+Qboa : 0 und
+Veja : 0 und
+Limpador perfumado : 0 und
+Detergente  : 1 und
+Esponja : 8 und
+Caixa G : 9 und
+Caixa M : 3 und
+Caixa P : 3 und
+Caixa Roll : 2 und
+Lacre Itta : 6 und
+Papel manteiga : 4 und
+Etiqueta : 7 und
+Fubá : 3.200 kg
+Vinagre : 12 und
+Perfect : 1 und
+Burrata : 350 g
+Álcool gel : 4 g

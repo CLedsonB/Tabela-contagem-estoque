@@ -1,0 +1,123 @@
+Antartica 0 Lata  : 
+Antatica Lata  : 
+Antartica 1L : 
+Coca cola 0 Lata  : 
+Coca cola 0 1L : 
+Coca cola Lata  : 
+Coca cola 1L : 
+H2O : 
+Heineken : 
+Heineken 0 : 
+Suco Dell valle uva : 
+Agua  : 
+Agua com gas  : 
+Azeite extra virgem : 4.650 kg
+Azeite 30%  : 8.900 kg
+Farinha de trigo : 155.000 kg
+Fermento  : 3.750 kg
+Canela em po : 175 g
+Molho shoyu  : 2.860 kg
+Sal  : 16.000 kg
+Acucar  : 8.000 kg
+Caldo de Galinha  : 1.000 kg
+Caldo de Carne : 290 g
+Molho Teriyaki  : 1.600 kg
+Atum : 4.915 kg
+Bacon : 1.770 kg
+Calabresa : 25.965 kg
+Camarão  : 11.560 kg
+Carne de fumeiro : 3.440 kg
+Frango : 5.975 kg
+Lombinho  : 2.400 kg
+Parma  : 170 g
+Pepperoni  : 3.500 kg
+Peito de peru : 5.045 kg
+Presunto  : 6.535 kg
+Salame : 2.875 kg
+Presunto Royale : 300 g
+Ovo : 50 und
+Mortadela : 0 g
+Pistache : 0 g
+Vinagre : 11 und
+Fuba : 25.000 kg
+Brie : 2.520 kg
+Catupiry  : 31.300 kg
+Cream cheese  : 1.945 kg
+Queijo Gorgonzola  : 1.150 kg
+Queijo Mussarela  : 49.000 kg
+Queijo Parmesao : 8.950 kg
+Queijo Provolone  : 4.630 kg
+Queijo coalho : 5.925 kg
+Stracciatella : 390 g
+Queijo de bufala  : 2.470 kg
+Queijo de cabra  : 865 g
+Biscoito amanteigado  : 440 g
+Chocolate ao leite  : 7.070 kg
+Chocolate branco : 3.030 kg
+Chocolate branco barra  : 250 g
+Creme de avela : 0 g
+Doce de leite  : 2.130 kg
+Geleia de amora : 2.900 kg
+Geleia de pimenta : 1.320 kg
+Goiabada  : 7.725 kg
+Mel : 1.220 kg
+Oreo  : 700 g
+Cebola caramelizada : 650 g
+Amendoin : 700 g
+Alho  : 530 g
+Alho-poro  : 320 g
+Cebolinha  : 195 g
+Coentro : 125 g
+Hortela : 135 g
+Manjericao : 55 g
+Oregano : 850 g
+Pimenta calabresa  : 355 g
+Champingon  : 1.365 kg
+Molho Pesto : 480 g
+Paprica Doce : 470 g
+Alho frito  : 75 g
+Azeitona  : 4.960 kg
+Banana da prata  : 830 g
+Banana da terra  : 5.160 kg
+Cebola roxa : 15.225 kg
+Cebola branca : 15.000 kg
+Cenoura : 2.810 kg
+Milho  : 6.590 kg
+Morango : 450 g
+Cominho  : 260 g
+Polpa de tomate  : 12.360 kg
+Rucula  : 375 g
+Tomate  : 13.000 kg
+Tomate cereja : 260 g
+Limao siciliano  : 860 g
+Papel higiênico : 11 und
+Papel toalha : 3 und
+Papel interfolhado : 2 und
+Sabao em po : 0 und
+Copo 550 ml : 1 und
+Copo 300 ml : 0 und
+Copo 180 ml : 2 und
+Gas : 3 und
+Bobina P : 16 und
+Bobina G : 0 und
+Luva  : 5 und
+Touca : 2 und
+Alcool bicarbonato  : 5 und
+Alcool gel : 1 und
+Perfect : 1 und
+Cx ketchup sache : 0 und
+Cx mostarda sache : 3 und
+Cx maionese sache : 1 und
+Qboa : 0 und
+Veja : 0 und
+Limpador perfumado : 0 und
+Detergente  : 1 und
+Esponja : 4 und
+Caixa G : 5 und
+Caixa M : 9 und
+Caixa P : 7 und
+Caixa Roll : 4 und
+Lacre Itta : 3 und
+Papel manteiga : 10 und
+Etiqueta : 5 und
+Pimenta do reino : 200 g

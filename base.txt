@@ -22,8 +22,9 @@ Molho shoyu
 Sal 
 Acucar 
 Caldo de Galinha 
-Caldo de Carne
 Molho Teriyaki 
+Barbecue
+Pimenta do reino
 
 Atum
 Bacon
@@ -39,8 +40,6 @@ Presunto
 Salame
 Presunto Royale
 Ovo
-Mortadela
-Pistache
 Vinagre
 Fuba
 
@@ -107,7 +106,6 @@ copo 300 ml
 copo 180 ml
 gas
 bobina P
-bobina G
 luva 
 touca
 alcool bicarbonato 
